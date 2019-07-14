@@ -1,18 +1,19 @@
 package com.example.numtoword;
 
-import com.example.numtoword.util.TranslateUtil;
+import com.example.numtoword.service.NumToWordConvert;
+import com.example.numtoword.service.NumToWordConvertImpl;
 
 /**
- * Hello world!
+ * Convert To Word main class
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        TranslateUtil util = new TranslateUtil();
-    	System.out.println(util.translateToWords(56));
-    	System.out.println(util.translateToWords(56945781));
-    	System.out.println(util.translateToWords(999999999));
+    	NumToWordConvert util = new NumToWordConvertImpl();
+    	System.out.println(util.convertToWord(56));
+    	System.out.println(util.convertToWord(56945781));
+    	System.out.println(util.convertToWord(999999999));
     }
 }
